@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "../components/Product";
+// import Product from "../components/Product";
 import { lazy,Suspense } from "react";
 const Product=lazy(()=>import("../components/Product"));
 const Moives = () => {
