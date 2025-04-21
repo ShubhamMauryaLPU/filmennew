@@ -19,22 +19,22 @@ const Navbar = () => {
           My <span className="text-red-600">Cafe</span>
         </span>
       </Link>
-      <ul className="hidden lg:flex justify-center items-center w-full">
+      <ul className="hidden md:flex lg:flex justify-center items-center w-full">
         {navData.map((item) => (
           <Link to={item.link} key={item.id}>
             <li  className="px-5 lg:px-10 flex justify-center items-center hover:text-red-600">
               <i className={`fa-solid ${item.icon}`}></i>
-              <span className="px-2 hidden md:flex lg:flex ">{item.name}</span>
+              <span className="px-2 hidden lg:flex ">{item.name}</span>
             </li>
           </Link>
         ))}
       </ul>
-      <span onClick={handleOnClick} className="w-full px-10 text-3xl lg:hidden"><i className="fa-solid fa-bars lg:hidden float-right"></i></span>
+      <span onClick={handleOnClick} className="w-full px-10 text-3xl md:hidden lg:hidden"><i className="fa-solid fa-bars lg:hidden float-right"></i></span>
     </div>
     {
       active&&
       <div className="bg-blue-400">
-      <ul className="lg:hidden flex flex-col justify-center items-center w-full ">
+      <ul className="md:hidden lg:hidden flex flex-col justify-center items-center w-full ">
         {navData.map((item) => (
           <Link to={item.link} key={item.id}>
             <li  className="px-5 lg:px-10 flex justify-center items-center border-b-2 w-full hover:text-red-600" onClick={handleOnClick}>

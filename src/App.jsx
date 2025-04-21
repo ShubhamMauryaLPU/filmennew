@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Food from "./pages/Food";
 import Drink from "./pages/Drink";
+import ShowPage from "./components/ShowPage";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/food" element={<Food />} />
         <Route path="/drink" element={<Drink />} />
+        <Route path="/product/:id" element={<ShowPage/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

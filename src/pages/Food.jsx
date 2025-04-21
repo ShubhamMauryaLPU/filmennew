@@ -1,7 +1,12 @@
 import React from "react";
 import foodData from "../data/foodData";
 import Card from "../components/Card";
+import { useNavigate } from "react-router-dom";
 const Food = () => {
+  const navigate=useNavigate();
+  let handleOnClick=(item)=>{
+    navigate(`/product/${item.id}`)
+  }
   return (
     <div className="min-h-[100vh] w-full ">
       <div>
@@ -23,11 +28,11 @@ const Food = () => {
           />
         </picture>
       </div>
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-1">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-1 place-items-center">
           {
             foodData.map((item,idx)=>(
-              <div key={idx.id}>
-                <Card image={item.image} title={item.title} description={item.description} imageAvif={item.imageAvif&&item.imageAvif} imageWebp={item.imageWebp&&item.imageWebp}  />
+              <div key={idx.id} onClick={()=>handleOnClick(item)}>
+                <Card image={item.image} title={item.title} description={item.description} imageAvif={item.imageAvif&&item.imageAvif} imageWebp={item.imageWebp&&item.imageWebp}   />
               </div>
             ))
           }

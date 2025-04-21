@@ -63,7 +63,7 @@ const foodData = [
   },
   {
     id: 10,
-    image: "https://source.unsplash.com/400x300/?donuts",
+    image: "/images/donuts.webp",
     title: "Sweet Donuts",
     description: "Assorted donuts with different delicious toppings.",
   },

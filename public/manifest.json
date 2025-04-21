@@ -1,0 +1,21 @@
+{
+    "short_name": "MYCAFE",
+    "name": "My Cafe PWA",
+    "icons": [
+      {
+        "src": "/public/img.jpg",
+        "type": "image/png/jpg",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/public/donuts.webp",
+        "type": "image/png/webp",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#000000"
+  }
+  
