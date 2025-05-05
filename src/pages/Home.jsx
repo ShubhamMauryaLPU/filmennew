@@ -34,7 +34,7 @@ const Home = () => {
           {
             foodData.map((item,idx)=>(
               idx<3&&
-              <div key={idx.id} className="place-items-center">
+              <div key={item.id} className="place-items-center">
                 <Card image={item.image} title={item.title} description={item.description} imageAvif={item.imageAvif&&item.imageAvif} imageWebp={item.imageWebp&&item.imageWebp}  />
               </div>
             ))
@@ -49,7 +49,7 @@ const Home = () => {
           {
             drinkData.map((item,idx)=>(
               idx<3&&
-              <div key={idx.id} className="place-items-center">
+              <div key={item.id} className="place-items-center">
                 <Card image={item.image} title={item.title} description={item.description}  imageAvif={item.imageAvif&&item.imageAvif} imageWebp={item.imageWebp&&item.imageWebp}/>
               </div>
             ))
